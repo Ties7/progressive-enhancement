@@ -10,13 +10,61 @@
 			/* Schrijf hier gewoon je CSS voor dit component */
 
 			/* Hint: Dit component kun je volledig met HTML en CSS bouwen */
+			.details {
+
+				summary {
+					width: fit-content;
+					border: 1px solid black;
+					/* background-color: rgb(177, 117, 255); */
+					padding: .5em;
+					border-radius: .5em;
+				}
+				
+
+				p {
+					width: fit-content;
+					/* background-color: rgb(177, 117, 255); */
+					margin: 0;
+					padding: .5em;
+					border-bottom-left-radius: .5em;
+					border-bottom-right-radius: .5em;
+					border-top-right-radius: .5em;
+				}
+			}
+
+			.details[open] {
+
+				summary {
+					width: fit-content;
+					background-color: rgb(177, 117, 255);
+					border-bottom-left-radius: 0;
+					border-bottom-right-radius: 0;
+					border: none;
+				}
+
+				p {
+					width: fit-content;
+					background-color: rgb(177, 117, 255);
+				}
+
+				summary::marker {
+					content: "x ";
+				}
+			}
+
+			summary::marker {
+				content: "+ ";
+			}
 
 			/* Hint: Denk aan de states van het component; deze kan open en dicht zijn */
 		</style>
 	</head>
 	<body>
 		<h1>Veelgestelde vragen</h1>
-
+		<details class="details">
+			<summary>Wat is frontend development?</summary>
+			<p>Een frontend developer ontwerpt en bouwt websites in HTML, CSS en JavaScript. Deze frontend talen leer je bij ons, je hebt dus geen voorkennis nodig.</p>
+		</details>
 
 		<!-- Content (waar nog wat HTML omheen moet 😄):
 		Wat is frontend development?
